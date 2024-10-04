@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<header>
+  <h1>{{ site.name }}</h1>
+</header>
+<main>
+  <h2>log</h2>
+  <section>
+    <ul>
+      {% for log in site.posts %}
+      <li>
+        <p>
+          <span>{{ log.date | date: "%y%m%d" }}</span>
+          <a href="{{ site.baseurl }}{{ log.url }}">{{ log.title }}</a>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>

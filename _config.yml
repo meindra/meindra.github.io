@@ -1,0 +1,23 @@
+name: meindra rahardian
+url: meindra.github.io
+permalink: /:short_year:month:day:output_ext
+
+defaults:
+  - 
+    scope:
+      paths: ''
+      type: 'posts'
+    values:
+      layout: 'log'
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

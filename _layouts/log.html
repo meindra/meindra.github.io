@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<header>
+  <h1 class="go-home"><a href="/">{{ site.name }}</a></h1>
+</header>
+<article>
+  <h2>{{ page.title }}</h2>
+  <section>
+    {{ content }}
+    <span>{{ page.date | date: "%y%m%d" }}</span>
+  </section>
+</article>
