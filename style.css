@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('./Inconsolata.woff2') format('woff2'), url('./Inconsolata.woff') format('woff');
+}
 
 *,
 *::after,
@@ -16,23 +19,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Inconsolata', 'Roboto Mono', Consolas, monospace;
-  font-size: 1.5rem;
   line-height: 2;
   letter-spacing: 0.8px;
-  color: #191919;
-  background-color: #f7fdfe;
-  padding: 6rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #fafafa;
-    background-color: #191919;
-  }
-
-  img {
-    filter: brightness(85%);
-  }
+  color: #222;
+  padding: 1.3rem;
 }
 
 a {
@@ -44,21 +34,19 @@ a:hover {
   opacity: 0.5;
 }
 
-h1,
-h2,
-p,
-span {
-  font-size: 1.6rem;
-  font-weight: 400;
-  text-transform: lowercase;
-}
-
 h1::before,
 h2::before {
   content: '/ ';
   color: #808080;
-  /* color: #28cdcd; */
-  /* font-weight: 600; */
+}
+
+h1,
+h2,
+p,
+span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: lowercase;
 }
 
 h1.go-home::before {
@@ -82,7 +70,7 @@ article {
 }
 
 header {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 main {
@@ -94,14 +82,14 @@ section span {
 }
 
 article h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 article p,
 article img,
 article .yt {
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 article p {
@@ -132,7 +120,7 @@ article p {
   background-color: #ccc;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 450px) {
   body {
     padding: 2rem;
   }
@@ -143,25 +131,32 @@ article p {
   span {
     font-size: 1.4rem;
   }
+
+  article h2,
+  article p,
+  article img,
+  article .yt {
+    margin-bottom: 1.75rem;
+  }
 }
 
-@media (max-width: 450px) {
+@media (min-width: 640px) {
   body {
-    padding: 1.3rem;
+    padding: 6rem;
   }
   header {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   h1,
   h2,
   p,
   span {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   article h2,
   article p,
   article img,
   article .yt {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
